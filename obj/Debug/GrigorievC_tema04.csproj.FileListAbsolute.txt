@@ -1,0 +1,12 @@
+C:\Users\catal\source\repos\GrigorievC_tema04\bin\Debug\GrigorievC_tema04.exe.config
+C:\Users\catal\source\repos\GrigorievC_tema04\bin\Debug\GrigorievC_tema04.exe
+C:\Users\catal\source\repos\GrigorievC_tema04\bin\Debug\GrigorievC_tema04.pdb
+C:\Users\catal\source\repos\GrigorievC_tema04\bin\Debug\OpenTK.dll
+C:\Users\catal\source\repos\GrigorievC_tema04\bin\Debug\OpenTK.pdb
+C:\Users\catal\source\repos\GrigorievC_tema04\bin\Debug\OpenTK.xml
+C:\Users\catal\source\repos\GrigorievC_tema04\obj\Debug\GrigorievC_tema04.csproj.AssemblyReference.cache
+C:\Users\catal\source\repos\GrigorievC_tema04\obj\Debug\GrigorievC_tema04.csproj.CoreCompileInputs.cache
+C:\Users\catal\source\repos\GrigorievC_tema04\obj\Debug\Grigorie.71547709.Up2Date
+C:\Users\catal\source\repos\GrigorievC_tema04\obj\Debug\GrigorievC_tema04.exe
+C:\Users\catal\source\repos\GrigorievC_tema04\obj\Debug\GrigorievC_tema04.pdb
+C:\Users\catal\source\repos\GrigorievC_tema04\obj\Debug\GrigorievC_tema04.exe.config
