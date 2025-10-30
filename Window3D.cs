@@ -34,6 +34,8 @@ namespace OpenTK_Template
             camera = new Camera3DIsometric(80, 80, 80, 0, 0, 0, 0, 1, 0);
 
             rainOfObjects = new List<Objectoid>();
+
+            displayHelp();
         }
 
         protected override void OnLoad(EventArgs e)
@@ -116,8 +118,28 @@ namespace OpenTK_Template
                 GRAVITY = !GRAVITY;
             }
 
+            if (thisKeyboard[Key.H] && !previousKeyboard[Key.H])
+            {
+                Console.Clear();
+                displayHelp();
+            }
+
             previousKeyboard = thisKeyboard;
             previousMouse = thisMouse;
+        }
+
+        // metoda pentru afisarea meniului de ajutor
+        public void displayHelp()
+        {
+            System.Console.WriteLine("Help menu :");
+            System.Console.WriteLine("H - display help menu;");
+            System.Console.WriteLine("ESC - close scene");
+            System.Console.WriteLine("WASD - moving around scene;");
+            System.Console.WriteLine("SHIFT - moving down;");
+            System.Console.WriteLine("SPACE - moving up;");
+            System.Console.WriteLine("LEFT CLICK - spawn a objectoid;");
+            System.Console.WriteLine("RIGHT CLICK - reset scene;");
+            System.Console.WriteLine("G - toggle gravity;");
         }
 
         protected override void OnRenderFrame(FrameEventArgs e)
@@ -134,10 +156,6 @@ namespace OpenTK_Template
             foreach(Objectoid obj in rainOfObjects)
             {
                 obj.Draw();
-            }
-
-            foreach(Objectoid obj in rainOfObjects)
-            {
                 obj.UpdatePosition(GRAVITY);
             }
 

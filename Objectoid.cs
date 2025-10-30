@@ -25,14 +25,17 @@ namespace GrigorievC_tema04
 
         public Objectoid(bool gravity_status)
         {
+            // initierea proprietatilor entitatii
             this.visibility = true;
             this.isGravityBound = gravity_status;
             this.color = _randomizer.getRandomColor();
             this.size = _randomizer.GetRandomOffset(2, 10);
 
+            // se genereaza aleatoriu inaltimea si raza de pozitionare a entitatii
             int heightOffset = _randomizer.GetRandomOffset(20, 50);
             int radialOffset = _randomizer.GetRandomOffset(5, 40);
 
+            // lista cu coordonate pentru modelul entitatii
             this.coordList = new List<Vector3>();
             this.coordList.Add(new Vector3(0 + radialOffset, 0 + heightOffset, this.size + radialOffset));
             this.coordList.Add(new Vector3(0 + radialOffset, 0 + heightOffset, 0 + radialOffset));
@@ -44,6 +47,9 @@ namespace GrigorievC_tema04
             this.coordList.Add(new Vector3(0 + radialOffset, this.size + heightOffset, 0 + radialOffset));
             this.coordList.Add(new Vector3(0 + radialOffset, 0 + heightOffset, this.size + radialOffset));
             this.coordList.Add(new Vector3(0 + radialOffset, 0 + heightOffset, 0 + radialOffset));
+
+            // pentru debug se afiseaza pozitia si marimea obiectului in consola
+            System.Console.WriteLine($"spawned entity at x={this.coordList.Min(v => v.X)}, y={this.coordList.Min(v => v.Y)}, z={this.coordList.Min(v => v.Z)}, size={this.size}");
         }
 
         public void Draw()
@@ -72,6 +78,7 @@ namespace GrigorievC_tema04
             }
         }
 
+        // metoda pentru detectarea coliziunii intre entitate si grid
         public bool GroundCollisionDetected()
         {
             foreach(Vector3 coord in this.coordList)
